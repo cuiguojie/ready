@@ -15,9 +15,9 @@ inquirer
         {
           name: 'yarn',
         },
-        {
-          name: 'pip',
-        }
+        // {
+        //   name: 'pip',
+        // }
       ],
     }
   ])
