@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/cuiguojie/ready#readme",
   "dependencies": {
+    "eslint": "^7.5.0",
     "inquirer": "^7.3.2"
   }
 }

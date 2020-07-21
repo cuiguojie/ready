@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const packages = require('./packages');
 
 inquirer
   .prompt([
@@ -12,15 +13,19 @@ inquirer
           checked: true,
         },
         {
+          name: 'yarn',
+        },
+        {
           name: 'pip',
-          checked: true,
         }
       ],
     }
   ])
   .then(answers => {
     // Use user feedback for... whatever!!
-    console.log(JSON.stringify(answers));
+    answers.list.forEach(item => {
+      packages[item]();
+    });
   })
   .catch(error => {
     if (error.isTtyError) {
