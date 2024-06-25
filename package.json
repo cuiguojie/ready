@@ -1,0 +1,42 @@
+{
+  "name": "@cuiguojie/ready",
+  "version": "0.1.0-beta.0",
+  "description": "Interactive CLI tool for project configuration",
+  "main": "dist/index.js",
+  "module": "./dist/main.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.mjs",
+      "require": "./dist/main.js"
+    }
+  },
+  "bin": {
+    "ready": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "pnpm run build"
+  },
+  "author": "cuiguojie@me.com",
+  "license": "MIT",
+  "homepage": "https://github.com/cuiguojie/ready",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuiguojie/ready.git"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.8",
+    "tsup": "^8.1.0",
+    "typescript": "^5.5.2"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.7.0",
+    "picocolors": "^1.0.1"
+  }
+}
