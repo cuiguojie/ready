@@ -25,6 +25,10 @@ export async function runEditorConfig() {
     await writeFile('.editorconfig', template);
     log.success('.editorconfig file created successfully.');
   } catch (error) {
-    log.error(error);
+    if (error instanceof Error) {
+      log.error(error.message);
+    } else {
+      console.error(error);
+    }
   }
 }

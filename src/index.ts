@@ -1,5 +1,5 @@
 import { intro, outro, select, isCancel } from "@clack/prompts";
-import { runEditorConfig, runGitIgnore } from './packages';
+import { runEditorConfig, runGitIgnore, runNvmrc } from './packages';
 import * as style from './styles';
 
 async function main() {
@@ -8,7 +8,7 @@ async function main() {
     const tasks = [
       '.editorconfig',
       '.gitignore',
-      // 'Nvmrc'
+      '.nvmrc'
     ];
     for (const task of tasks) {
       const run = await select({
@@ -33,9 +33,9 @@ async function main() {
           case '.gitignore':
             await runGitIgnore();
             break;
-        //   case 'Nvmrc':
-        //     await runNvmrc();
-        //     break;
+          case '.nvmrc':
+            await runNvmrc();
+            break;
         }
       }
     }
