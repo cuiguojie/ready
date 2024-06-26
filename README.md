@@ -4,7 +4,7 @@
 
 - [x] `.editorconfig`
 - [x] `.gitignore`
-- [ ] `.nvmrc`
+- [x] `.nvmrc`
 - [ ] `commitlint` 相关配置
 
 ## 使用

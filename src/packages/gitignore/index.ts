@@ -25,6 +25,10 @@ export async function runGitIgnore() {
     await writeFile('.gitignore', template);
     log.success('.gitignore file created successfully.');
   } catch (error) {
-    log.error(error);
+    if (error instanceof Error) {
+      log.error(error.message);
+    } else {
+      console.error(error);
+    }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@cuiguojie/ready",
-  "version": "0.1.0-beta.0",
+  "version": "0.1.0",
   "description": "Interactive CLI tool for project configuration",
   "main": "dist/index.js",
   "module": "./dist/main.mjs",
