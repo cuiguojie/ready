@@ -4,7 +4,7 @@ import * as style from '../../styles';
 import preset from './preset';
 
 export async function runNvmrc() {
-  const exists = await fileExists('.gitignore');
+  const exists = await fileExists('.nvmrc');
 
   if (exists) {
     const overwrite = await select({
